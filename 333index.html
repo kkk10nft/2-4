@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS стилі */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://images.prom.ua/4777773779_w640_h640_4777773779.jpg');
+            background-size: cover;
+            text-align: center; /* Додаємо вирівнювання по центру */
+            position: relative; /* Додаємо позицію relative */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7); /* Додаємо білий прозорий фон для тіла сторінки */
+            z-index: 0; /* Задаємо з-index 0 для фону */
+        }
+
+        .header {
+            background-color: #ff6b6b; /* Рожевий колір для заголовка */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            z-index: 2; /* Задаємо з-index 2, щоб розмістити заголовок попереду фону */
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            text-align: left; /* Вирівнюємо текст новин зліва */
+            background-color: rgba(255, 255, 255, 0.7); /* Зберігаємо білий прозорий фон для контенту */
+            position: relative;
+            z-index: 3; /* Задаємо з-index 3, щоб розмістити контент попереду фону */
+        }
+
+        .form {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Зберігаємо білий прозорий фон для форми реєстрації */
+            position: relative;
+            z-index: 4; /* Задаємо з-index 4, щоб розмістити форму реєстрації попереду фону */
+        }
+
+        .form label {
+            display: block;
+            margin-bottom: 5px;
+            text-align: left; /* Вирівнювання міток ліворуч */
+            color: #ff6b6b; /* Рожевий колір для міток форми */
+        }
+
+        .form input[type="text"],
+        .form input[type="email"],
+        .form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .table {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7); /* Зберігаємо білий прозорий фон для таблиці */
+            position: relative;
+            z-index: 5; /* Задаємо з-index 5, щоб розмістити таблицю попереду фону */
+        }
+
+        .table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0 auto; /* Горизонтальне вирівнювання таблиці по центру */
+        }
+
+        .table th, .table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .table th {
+            background-color: #ff6b6b; /* Рожевий колір для заголовків таблиці */
+            color: #fff;
+        }
+
+        .table tbody tr:nth-child(even) {
+            background-color: #ffe0e0; /* Ніжно рожевий колір для парних рядків таблиці */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> <!-- Додаємо білий прозорий фон -->
+    <header class="header">
+        <h1 style="color: #ffffff;">Взуття</h1> <!-- Рожевий колір для заголовка -->
+        <nav>
+            <ul>
+                <li><a href="#">Чоловіче</a></li>
+                <li><a href="#">Жіноче</a></li>
+                <li><a href="#">Дитяче</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="table">
+        <h2>Вам допоможуть</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ім'я</th>
+                    <th>Вік</th>
+                    <th>Посада</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Владислав</td>
+                    <td>21</td>
+                    <td>Менеджер-консультант</td>
+                </tr>
+                <tr>
+                    <td>Марія</td>
+                    <td>23</td>
+                    <td>Менеджер-консультант</td>
+                </tr>
+                <tr>
+                    <td>Сергій</td>
+                    <td>26</td>
+                    <td>Менеджер-консультант</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <section class="form">
+        <h2>Онлайн замовлення</h2>
+        <form>
+            <label for="name">Ваше ім'я:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Ваш Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Відправити</button>
+        </form>
+    </section>
+    <section class="content">
+        <h2>Наші соц. мережі</h2>
+        <ul>
+            <li><a href="#">Інстаграм</a></li>
+            <li><a href="#">Телеграм</a></li>
+            <li><a href="#">Вайбер</a></li>
+        </ul>
+    </section>
+</body>
+</html>
